@@ -26,7 +26,7 @@ Done
 Shared schedule
 
 [06.8]
-10 hour / 45 hour checks
+10-hour / 45-hour checks
 
 [06.9]
 Done
