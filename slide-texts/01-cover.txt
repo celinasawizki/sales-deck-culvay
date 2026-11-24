@@ -4,7 +4,7 @@
 # Leave any <tags> in place. Lines starting with # are ignored.
 
 [01.1]
-Founding agency pilot · 2026
+Founding agency pilot 
 
 [01.2]
 CULVAY

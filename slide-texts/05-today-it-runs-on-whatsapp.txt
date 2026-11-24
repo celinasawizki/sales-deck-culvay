@@ -43,7 +43,7 @@ EMPTY UNTIL NOW
 Connected
 
 [05.14]
-Both sides. One placement record.
+Both sides. One placement record. AI.
 
 [05.15]
 Intelligence

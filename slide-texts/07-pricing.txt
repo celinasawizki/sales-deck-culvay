@@ -13,7 +13,7 @@ Simple pricing. Families always *free.*
 The agency pays
 
 [07.4]
-$79.99
+$TBD
 
 [07.5]
 per coordinator / month
@@ -22,7 +22,7 @@ per coordinator / month
 Founding agency
 
 [07.7]
-[__]% off for [__] months
+TBD% off for 12 months
 
 [07.8]
 Agency leadership
