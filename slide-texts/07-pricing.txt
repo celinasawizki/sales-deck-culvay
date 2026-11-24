@@ -7,22 +7,22 @@
 07 / Pricing
 
 [07.2]
-Simple pricing. Families always *free.*
+Start free. Families always *free.*
 
 [07.3]
-The agency pays
+The founding agency pays
 
 [07.4]
-$TBD
+$0
 
 [07.5]
-per coordinator / month
+for a 90-day pilot
 
 [07.6]
-Founding agency
+After the pilot
 
 [07.7]
-TBD% off for 12 months
+Founding price, locked for 12 months
 
 [07.8]
 Agency leadership
@@ -31,7 +31,7 @@ Agency leadership
 Coordinators
 
 [07.10]
-Paid seats
+Free for 90 days
 
 [07.11]
 Au pairs and host families

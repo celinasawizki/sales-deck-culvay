@@ -1,4 +1,4 @@
-# Slide 09: Your 3-month founding pilot
+# Slide 09: Your 90-day founding pilot
 # Edit only the text under each [number]. Keep the [number] lines.
 # *word* = pink italic accent. A new line = a line break on the slide.
 # Leave any <tags> in place. Lines starting with # are ignored.
@@ -7,7 +7,7 @@
 09 / Your founding pilot
 
 [09.2]
-Your 3-month founding *pilot.*
+Your 90-day founding *pilot.*
 
 [09.3]
 One region. Clear success criteria.
