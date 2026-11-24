@@ -1,0 +1,46 @@
+CULVAY SALES DECK — DESIGN & CONVERSION REVIEW
+
+DELIVERABLES
+index.html: editable, interactive 10-slide sales deck. Open in a browser.
+Culvay-Sales-Deck.pdf: shareable deck with the example cost scenario.
+Culvay-Placement-Review.pdf: two-page, printable lead magnet.
+placement-review.html: editable source for the worksheet.
+deck.css / deck.js / assets: local presentation styling, interactions and assets.
+
+WHAT CHANGED
+The investor pitch's exact fonts, black/blush/cherry palette, original family photography and original blush illustrations now form the sales deck's visual system. Larger type, restrained layouts and a consistent canvas replace the accumulated slide-specific styling. One light slide provides a clear pause in the story. The original source decks remain unchanged.
+
+The narrative now moves through a visibility gap, buyer-specific economics, the coordinator workflow, a reason to start before arrivals, useful free resources, and a focused pilot invitation. The founder story establishes a relevant reason for building Culvay without pretending it is proof of product results.
+
+The calculator now accepts placement count, rematch rate and net cost per rematch. The earlier deck exposed only placement count and treated 66% of loss as recoverable. The new calculator labels its example assumptions and exports a CSV. Monthly equivalent is a budgeting perspective, not an assertion that delaying a Culvay purchase causes that loss.
+
+The worksheet is a real, completed two-page resource, not a promised future download. It helps a team review its visibility gaps, estimate rematch costs and assign an action. It is deliberately ungated. Email CTAs invite a placement review with agency context; they do not automatically send anything or collect data. A gated acquisition funnel would need a real form, consent language, delivery workflow and lead tracking. None is implied by this local deck.
+
+Removed unverified scarcity (five spots/two taken), the April 2027 deadline, a two-year price lock, the 90-day-free commitment, the early-detection guarantee and the claim that 66% of costs are recoverable. The source sales-pitch.md marked these offer terms as placeholders even though the rendered deck presented them without that caveat. Reintroduce terms only when they represent an actual offer.
+
+WHAT STILL NEEDS TO BE FIXED FOR A STRONGER SALES CASE
+1. A verified pilot story. Add one agency example with cohort size, observation period, initial workflow, what Culvay surfaced, the coordinator's response and a measured result. Until then, sell a scoped evaluation rather than proven rematch reduction.
+2. Research traceability. The existing sales materials report 64% and 32% from a study of 120+ participants. Verify the exact wording, denominator, sample size for each question, study dates and recruitment method. Do not subtract the percentages or claim that 32% of participants with issues contacted coordinators without checking the underlying responses. Current slides attribute the figures to the existing study and distinguish them from product impact.
+3. Product scope. Validate the brief and check-in workflow against what can be demonstrated today. The brief is explicitly illustrative. Confirm current access controls, consent, retention, deletion and data-handling terms for the pilot. Avoid blanket claims such as 'your agency owns all the data' without the actual agreement.
+4. Pilot terms. Define duration, cohort size, coordinator workload, support, price and success criteria. The draft proposes a process, not a commercial commitment. The investor pitch referred to a six-month pilot while the sales deck proposed 90 days; the new version does not choose between inconsistent terms.
+5. A live demo. Use a short, anonymized real product walkthrough to substantiate the workflow. A mock brief helps explain the idea, but should not stand in for working-product evidence.
+6. Distribution. Send the deck with the worksheet attached. Use the interactive HTML during discovery to replace the sample inputs with the buyer's data. Follow up on the gap they identified and propose one cohort with an owner and review date. Ask permission before adding leads to a mailing list or sequence.
+
+TALK TRACK
+Opening: Which signals does your team receive before someone requests a rematch?
+Research: These are Culvay's self-reported discovery figures. They identify a problem to investigate; they do not prove product efficacy.
+Cost: What numbers reflect your agency? Which costs are truly net of recovered fees?
+Workflow: What would a coordinator need to see before deciding to reach out?
+Urgency: When does your next cohort arrive, and how will you establish the starting baseline?
+Offer: Use the worksheet with your team. If it exposes a gap, let's scope a pilot around that gap.
+Decision: What result would make expansion worthwhile, and who should review that evidence?
+
+SOURCE FILES
+/Users/celinasawizki/culvay-salespitch2/index.html
+/Users/celinasawizki/culvay-salespitch2/sales-pitch.md
+/Users/celinasawizki/culvay-salespitch2/DESIGN.md
+/Users/celinasawizki/culvay-business-plan/investor-pitch/index.html
+/Users/celinasawizki/culvay-business-plan/culvay-slides.css
+/Users/celinasawizki/my-obsidian-brain/References/Culvay.md
+
+No past ChatGPT conversation memory was available. Brand context and the founder quotation came from these local Culvay materials. No new external statistics were introduced.

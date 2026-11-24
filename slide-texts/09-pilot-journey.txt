@@ -1,0 +1,62 @@
+# Slide 09: Your 3-month founding pilot
+# Edit only the text under each [number]. Keep the [number] lines.
+# *word* = pink italic accent. A new line = a line break on the slide.
+# Leave any <tags> in place. Lines starting with # are ignored.
+
+[09.1]
+09 / Your founding pilot
+
+[09.2]
+Your 3-month founding *pilot.*
+
+[09.3]
+One region. Clear success criteria.
+
+[09.4]
+1
+
+[09.5]
+2
+
+[09.6]
+3
+
+[09.7]
+4
+
+[09.8]
+5
+
+[09.9]
+Week 1
+
+[09.10]
+Scope, region,
+success criteria.
+
+[09.11]
+Weeks 2 to 3
+
+[09.12]
+Families and
+au pairs join.
+
+[09.13]
+Weeks 4 to 11
+
+[09.14]
+Early warnings.
+Review every two weeks.
+
+[09.15]
+Week 12
+
+[09.16]
+Results and decision.
+
+[09.17]
+Roll out
+
+[09.18]
+Every region.
+Founding price.

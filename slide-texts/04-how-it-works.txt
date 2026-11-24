@@ -1,0 +1,74 @@
+# Slide 04: How it works
+# Edit only the text under each [number]. Keep the [number] lines.
+# *word* = pink italic accent. A new line = a line break on the slide.
+# Leave any <tags> in place. Lines starting with # are ignored.
+
+[04.1]
+04 / How it works
+
+[04.2]
+Intelligence at every *level.*
+
+[04.3]
+Connected information. Better-informed decisions.
+
+[04.4]
+Agency leadership
+
+[04.5]
+<i></i>Agent swarms
+
+[04.6]
+<i></i><i></i>AI agents
+
+[04.7]
+<i></i><i></i>AI agents
+
+[04.8]
+<i></i><i></i>AI agents
+
+[04.9]
+Local coordinator
+
+[04.10]
+Host family
+
+[04.11]
+Au pair
+
+[04.12]
+1
+
+[04.13]
+weekly check-ins
++ schedule
+
+[04.14]
+2
+
+[04.15]
+placement intelligence
+
+[04.16]
+3
+
+[04.17]
+every placement, every week
+
+[04.18]
+4
+
+[04.19]
+organizational intelligence
+
+[04.20]
+<img src="assets/signet.png" alt="">Culvay<time>Early warning</time>
+
+[04.21]
+Parker family · Risk rising
+
+[04.22]
+Over the 45-hour weekly legal limit for 3 weeks.
+
+[04.23]
+Suggested: call the host family this week.

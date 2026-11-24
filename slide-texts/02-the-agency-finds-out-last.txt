@@ -1,0 +1,48 @@
+# Slide 02: The agency finds out last
+# Edit only the text under each [number]. Keep the [number] lines.
+# *word* = pink italic accent. A new line = a line break on the slide.
+# Leave any <tags> in place. Lines starting with # are ignored.
+
+[02.1]
+02 / The problem
+
+[02.2]
+The agency finds out *last.*
+
+[02.3]
+One manual check-in a month. Nothing in between. Until something breaks.
+
+[02.4]
+Agency leadership
+
+[02.5]
+Local coordinator
+
+[02.6]
+an <b>HR role</b>
+
+[02.7]
+Host family
+
+[02.8]
+Au pair
+
+[02.9]
+1
+
+[02.10]
+~1 check-in
+per month
+
+[02.11]
+2
+
+[02.12]
+scattered report
+only if turnover happens
+
+[02.13]
+Only <b class="pink">7.9%</b> of au pairs with a problem told their agency. <b class="pink">79.8%</b> told friends.
+
+[02.14]
+Source: Culvay field study of 120+ au pairs.

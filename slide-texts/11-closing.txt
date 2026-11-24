@@ -1,0 +1,19 @@
+# Slide 11: Every placement deserves to be heard.
+# Edit only the text under each [number]. Keep the [number] lines.
+# *word* = pink italic accent. A new line = a line break on the slide.
+# Leave any <tags> in place. Lines starting with # are ignored.
+
+[11.1]
+CULVAY
+
+[11.2]
+Every placement deserves to be heard.
+
+[11.3]
+Celina Sawizki
+
+[11.4]
+Co-founder, Culvay
+
+[11.5]
+culvay.com · info@culvay.com

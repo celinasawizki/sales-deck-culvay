@@ -1,0 +1,33 @@
+# Slide 08: Founders
+# Edit only the text under each [number]. Keep the [number] lines.
+# *word* = pink italic accent. A new line = a line break on the slide.
+# Leave any <tags> in place. Lines starting with # are ignored.
+
+[08.1]
+08 / Founders
+
+[08.2]
+The people behind *Culvay.*
+
+[08.3]
+Celina Sawizki
+
+[08.4]
+Co-founder · Former au pair
+
+[08.5]
+Psychology, Entrepreneurship & CS
+Temple University
+<span>WHY US Ambassador
+European Innovation Academy alumni</span>
+
+[08.6]
+Mukul Natarajan
+
+[08.7]
+Co-founder · Engineering
+
+[08.8]
+CS & Business
+University of Maryland
+<span>AI/ML Engineer</span>

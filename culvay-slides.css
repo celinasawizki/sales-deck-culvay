@@ -1,0 +1,104 @@
+/* Culvay presentation design system — extracted from index.html / workflow-diagram/how-culvay-works.html.
+   Drop <link rel="stylesheet" href="culvay-slides.css"> in a new presentation's <head> (same folder as this
+   file). In a subfolder, point the href there instead and fix the two @font-face/url() paths below to match
+   (e.g. ../culvay-slides.css won't fix the font paths for you — copy this file next to the new slide, or
+   adjust ../assets/... to the right depth, the way workflow-diagram/how-culvay-works.html does). */
+
+@font-face{font-family:Inter;src:url(assets/inter.woff2)}
+@font-face{font-family:Instrument;src:url(assets/serif.woff2);font-style:italic}
+
+:root{
+  --bg:#090909;--ink:#f6f2ed;--soft:#d4cbca;--muted:#aaa;--dim:#7d7478;
+  --blush:#f1b9c4;--blush-2:#f0dce0;--rose:#c48d9b;--cherry:#91384f;--cherry-2:#641f35;
+  --line:#ffffff1c;--line-2:#ffffff2e;--card:linear-gradient(140deg,#ffffff0e,#ffffff03);
+  --s:1;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+button,a{-webkit-tap-highlight-color:transparent}
+
+/* The one accent word per headline — wrap it in <em>, never a whole phrase. */
+em{font-family:Instrument,Georgia,serif;color:var(--blush);font-weight:400;letter-spacing:-.02em}
+
+/* Nav: signet + wordmark top-left, byline pill top-right. */
+header{position:fixed;top:0;left:0;right:0;z-index:10;padding:22px 4%;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(#090909c0,transparent);pointer-events:none}
+.brand{display:flex;align-items:center;gap:10px;font-size:23px;letter-spacing:-1px;font-weight:600}
+.brand img{width:26px}
+.label{font-size:10px;text-transform:uppercase;letter-spacing:2px;font-weight:500;color:var(--muted);border:1px solid #ffffff25;border-radius:30px;padding:9px 14px}
+
+/* Slide scaffolding: each slide is a 1280×720 canvas; stack sections with scroll-snap to move with
+   arrow keys / space / scroll. --s scales the whole canvas to fit the screen without resizing content. */
+main{height:100svh;overflow-y:auto;scroll-snap-type:y mandatory;scroll-behavior:smooth}
+section{height:100svh;scroll-snap-align:start;position:relative;display:grid;place-items:center;overflow:hidden}
+.canvas{width:1280px;height:720px;flex:none;transform:scale(var(--s));padding:88px 72px 82px;display:flex;flex-direction:column;position:relative}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:22px}
+
+.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:2px;font-weight:500;color:#dbb9b9;margin-bottom:12px}
+h2{font-size:52px;font-weight:550;line-height:1.02;letter-spacing:-.06em;margin:0}
+h3{margin:0;font-weight:500;letter-spacing:-.02em}
+p{margin:0}
+.lede{font-size:14px;line-height:1.55;color:var(--muted);max-width:430px}
+
+/* Card: the only elevation system is a 1px hairline border — never a shadow (one exception: .notif below). */
+.card{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:18px 20px;min-width:0}
+.card.hot{background:linear-gradient(135deg,var(--cherry),var(--cherry-2));border-color:#f1b9c433}
+.card.glow{border-color:#f1b9c455;background:linear-gradient(135deg,#ffffff0c,#91384f22)}
+
+.k{font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rose);font-weight:500}
+.hot .k{color:var(--blush-2)}
+.big{font-size:40px;font-weight:500;letter-spacing:-.055em;line-height:1;font-variant-numeric:tabular-nums}
+.cap{font-size:12px;line-height:1.45;color:#b9adb1}
+.hot .cap{color:var(--blush-2)}
+.note{font-size:10px;color:#777;margin-top:auto;padding-top:10px}
+.pink{color:var(--blush)}
+
+.grid{display:grid;gap:16px;min-height:0}
+.fill{flex:1;min-height:0}
+
+/* Tags / chips */
+.tag{display:inline-block;font-size:9px;letter-spacing:1px;text-transform:uppercase;border:1px solid #f1b9c455;color:var(--blush);border-radius:20px;padding:3px 8px;vertical-align:middle}
+.tag.grey{border-color:var(--line-2);color:var(--muted)}
+.chip{font-size:11px;color:var(--soft);border:1px solid var(--line-2);border-radius:20px;padding:6px 11px}
+.chip.soon{border-style:dashed;color:var(--muted)}
+
+/* Bar chart row: label, tabular value, filled track. */
+.bars{display:flex;flex-direction:column;gap:13px;margin-top:16px}
+.bar{display:grid;grid-template-columns:1fr auto;gap:5px 10px;font-size:12.5px;color:var(--soft)}
+.bar b{font-weight:500;font-variant-numeric:tabular-nums;color:var(--ink)}
+.bar i{grid-column:1/-1;height:7px;border-radius:4px;background:#ffffff10;position:relative;overflow:hidden}
+.bar i:after{content:"";position:absolute;inset:0;width:var(--w);border-radius:4px;background:#a79a94}
+.bar.sig{color:var(--blush)}
+.bar.sig b{color:var(--blush)}
+.bar.sig i:after{background:linear-gradient(90deg,var(--cherry),var(--blush))}
+
+/* Numbered step row */
+.steps{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.steps li{border-top:1px solid #f1b9c455;padding-top:12px;position:relative}
+.steps li:before{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--blush)}
+.steps span{font-size:9.5px;color:var(--rose);letter-spacing:1px}
+.steps h3{font-size:15px;margin:6px 0 4px}
+.steps p{font-size:11px;line-height:1.4;color:var(--muted)}
+
+/* Floating phone-notification mockup — the one place text sits on a light ground. */
+.notif{position:absolute;background:#f0dce0;border-radius:16px;padding:13px 14px;box-shadow:0 18px 50px #000a;color:#514548}
+.notif .app{display:flex;align-items:center;gap:7px;font-size:10px;font-weight:600;margin-bottom:8px}
+.notif .app img{width:18px;height:18px;background:#24171c;border-radius:5px;padding:3px}
+.notif .app time{margin-left:auto;font-weight:400;color:#78676d}
+.notif h4{margin:0 0 5px;font-size:13px;color:#242021;letter-spacing:-.3px}
+.notif p{font-size:10.5px;line-height:1.45}
+.notif .sug{margin-top:7px;padding-top:7px;border-top:1px solid #91384f55;color:#91384f;font-weight:500}
+
+/* Comparison table — the "us" column picked out in blush text, never a filled cell. */
+table.cmp{width:100%;border-collapse:collapse;font-size:12px}
+.cmp th{font-size:9px;letter-spacing:1.1px;text-transform:uppercase;font-weight:500;color:#b9adb1;text-align:center;padding:0 6px 9px;vertical-align:bottom;line-height:1.4}
+.cmp td{padding:8px 6px;border-top:1px solid var(--line);text-align:center}
+.cmp td:first-child{text-align:left;color:var(--ink)}
+
+/* Mono data: scores, counts, timestamps — always tabular-nums. */
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+
+/* For a single standalone 1280×720 slide exported to PDF via headless Chrome. Skip this if the
+   presentation is a multi-slide scrolling deck like index.html. */
+@page{size:1280px 720px;margin:0}

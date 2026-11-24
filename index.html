@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Culvay · Founding Pilot</title><meta name="author" content="Celina Sawizki"><link rel="icon" href="assets/signet.png">
+<link rel="stylesheet" href="culvay-slides.css">
+<style>
+/* culvay-slides.css already loads fonts from assets/; this page is one level deeper, so repoint them. */
+@font-face{font-family:Inter;src:url(assets/inter.woff2)}
+@font-face{font-family:Instrument;src:url(assets/serif.woff2);font-style:italic}
+
+h2.hl{font-size:52px;margin-bottom:0}
+
+/* ---------- Cover & closing ---------- */
+.cover{isolation:isolate}
+.cover .canvas{justify-content:center}
+.cover .canvas:before{content:"";position:absolute;inset:0 0 0 40%;z-index:-1;background:linear-gradient(90deg,#090909 0%,#090909c0 28%,#09090920 70%),linear-gradient(0deg,#090909 2%,transparent 35%),url(assets/family.jpg) 70% 36%/cover no-repeat}
+.cover-copy{max-width:640px;position:relative}
+.cover h1{font-size:76px;font-weight:550;line-height:1.02;letter-spacing:-.06em;margin:0 0 20px}
+.cover-sub{font-size:19px;line-height:1.5;color:var(--soft);max-width:460px}
+.byline{display:flex;align-items:center;gap:14px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line);max-width:420px}
+.byline img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid #36242c}
+.byline b{display:block;font-size:17px;font-weight:500}
+.byline small{display:block;font-size:12px;color:var(--rose);letter-spacing:.5px;margin-top:2px}
+.cover-site{margin-top:22px;font-size:12px;color:var(--muted);letter-spacing:1px}
+.closing .canvas{justify-content:center;align-items:center;text-align:center}
+.closing h1{font-size:60px}
+.closing .cover-sub{margin:0 auto 32px}
+
+/* ---------- Shared slide grid helpers ---------- */
+.v3{display:grid;flex:1;min-height:0;gap:22px}
+@media screen and (max-width:750px){.v3{grid-template-columns:minmax(0,1fr)!important}}
+
+/* ---------- 01 · Description ---------- */
+.pillars{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.pillars .chip{font-size:12px;padding:8px 14px}
+.thesis{font-size:26px;line-height:1.35;letter-spacing:-.015em;color:var(--ink);max-width:760px;margin-top:18px}
+.thesis b{font-weight:550}
+
+/* ---------- 03 · Solution : full workflow diagram ---------- */
+.diagram-canvas .lede{margin-bottom:0}
+.art{position:absolute;object-fit:contain}
+.name{font-size:15px;font-weight:500;letter-spacing:-.3px;color:var(--ink)}
+.caption{font-size:11.5px;line-height:1.35;color:var(--muted);margin:3px 0 0}
+.caption b{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:500;color:var(--blush)}
+.txt{position:absolute}
+.quiet{opacity:.5}
+.swarm-band{position:absolute;left:300px;width:820px;top:300px;height:34px;border:1px solid #f1b9c433;border-radius:14px;background:linear-gradient(135deg,#ffffff08,#91384f1c)}
+.pill{position:absolute;transform:translateX(-50%);display:flex;align-items:center;gap:7px;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--blush);border:1px solid #f1b9c455;border-radius:20px;background:#171114;white-space:nowrap}
+.pill i{width:5px;height:5px;border-radius:50%;background:#f1b9c4}
+.arrow-label{position:absolute;font-size:12px;line-height:18px;color:var(--blush);white-space:nowrap}
+.step{position:absolute;width:22px;height:22px;border:1px solid #f1b9c4;color:#201317;background:var(--blush);border-radius:50%;display:grid;place-items:center;font-family:ui-monospace,monospace;font-size:11px;font-weight:600}
+.more{position:absolute;left:1092px;top:378px}
+.more .mono{font-size:30px;color:var(--blush);letter-spacing:-.04em;line-height:1}
+
+/* ---------- 04 · Competition ---------- */
+.comp{grid-template-columns:1fr 330px;gap:36px;align-items:center}
+.comp .map{padding:14px 16px}
+.comp .map svg{width:100%;height:410px}
+.points{list-style:none;margin:0;padding:0}
+.points li{padding:20px 0;border-top:1px solid var(--line)}
+.points li:first-child{border-top:0}
+.points .big{font-size:44px}
+.points p{font-size:14px;line-height:1.5;color:var(--soft);margin-top:6px}
+
+/* ---------- 05 · Market ---------- */
+.mkt{grid-template-columns:280px 1fr 260px;align-items:center;gap:30px}
+.roles3{list-style:none;margin:0;padding:0}
+.roles3 li{padding:16px 0;border-top:1px solid var(--line)}
+.roles3 li:first-child{border-top:0}
+.roles3 b{display:block;font-size:18px;font-weight:500;letter-spacing:-.4px;margin-top:5px}
+.roles3 .buyer b{color:var(--blush)}
+.rings{display:flex;flex-direction:column;min-height:0}
+.rings svg{width:100%;height:auto;max-height:300px;display:block}
+.rings text{font-family:Inter,Arial,sans-serif;fill:var(--soft)}
+.gtm{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:8px;font-size:11px;color:var(--muted)}
+.gtm b{font-weight:500;color:var(--ink);border:1px solid var(--line-2);border-radius:20px;padding:5px 11px}
+.gtm b.on{background:var(--blush);color:#201317;border-color:var(--blush)}
+.mktdesc{font-size:13.5px;line-height:1.55;color:var(--soft)}
+.mktdesc b{color:var(--ink);font-weight:500}
+
+/* ---------- 06 · Product model ---------- */
+.prod{grid-template-columns:380px 1fr;gap:30px;align-items:center}
+.prod-shot{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.prod-shot img{width:100%;display:block}
+.prod-shot figcaption{font-size:11px;color:var(--muted);padding:8px 2px 0}
+.feat{list-style:none;margin:0;padding:0}
+.feat li{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:13px;color:var(--ink)}
+.feat li:first-child{border-top:0}
+.road{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.road li{position:relative;padding-top:16px;border-top:2px solid var(--blush)}
+.road li.now{border-top-style:dashed;border-top-color:#f1b9c4aa}
+.road li.next{border-top:2px dotted #ffffff40}
+.road li:before{content:"✓";position:absolute;top:-10px;left:0;width:18px;height:18px;border-radius:50%;background:var(--blush);color:#201317;font-size:10px;font-weight:700;display:grid;place-items:center}
+.road li.now:before{content:"";background:var(--bg);border:2px solid var(--blush)}
+.road li.next:before{content:"";background:var(--bg);border:1px solid #ffffff50}
+.road span{font-size:9px;letter-spacing:1.3px;text-transform:uppercase;color:var(--rose)}
+.road b{display:block;font-size:13px;font-weight:500;margin:4px 0 2px;letter-spacing:-.2px}
+.road small{display:block;font-size:10px;color:var(--muted);line-height:1.4}
+.partners{font-size:12px;line-height:1.5;color:var(--muted);margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+.partners b{color:var(--soft);font-weight:500}
+
+/* ---------- 07 · Business model : illustrated ---------- */
+.biz{grid-template-columns:1fr 1fr;gap:26px;align-items:start;flex:none;margin-top:8px}
+.price3{padding:28px 30px;position:relative;overflow:hidden}
+.price3 .row{display:flex;align-items:baseline;gap:10px;margin-top:10px}
+.price3 .big{font-size:46px}
+.price3-fig{position:absolute;right:-10px;top:-10px;width:128px;opacity:.95}
+.delivery{display:flex;flex-direction:column;gap:14px}
+.dstep{display:flex;align-items:center;gap:16px;border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--card)}
+.dstep img{width:64px;height:64px;border-radius:10px;object-fit:cover;flex:none;background:#171114}
+.dstep span{font-size:13px;color:var(--soft);line-height:1.4}
+.dstep b{color:var(--ink);font-weight:500}
+
+/* ---------- 09 · GTM ---------- */
+.gtmplan{grid-template-columns:1fr 1fr;gap:24px;align-items:start;flex:none;margin-top:8px}
+.gtmplan .card{padding:32px 34px}
+.gtmplan .card h3{font-size:10px;letter-spacing:1.3px;text-transform:uppercase;color:var(--rose);margin:0 0 10px}
+.gtmplan .card p{font-size:15px;line-height:1.7;color:var(--soft);margin:0}
+.gtmplan .card p+p{margin-top:14px}
+.seq{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:20px;font-size:11px;color:var(--muted)}
+.seq b{font-weight:500;color:var(--ink);border:1px solid var(--line-2);border-radius:20px;padding:6px 12px}
+.seq b.on{background:var(--blush);color:#201317;border-color:var(--blush)}
+
+/* ---------- 10 · Team ---------- */
+.team10{grid-template-columns:300px 1fr;gap:26px;align-items:start;flex:none;margin-top:8px}
+.team{display:flex;flex-direction:column;gap:14px}
+.person{display:flex;gap:12px;align-items:center}
+.person img{width:58px;height:58px;border-radius:50%;object-fit:cover;border:2px solid #36242c}
+.person b{display:block;font-size:14px;font-weight:500}
+.person small{display:block;font-size:10.5px;color:var(--muted);line-height:1.4;margin-top:2px}
+.amb{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:12px;font-size:11px;color:var(--muted)}
+.amb b{font-size:28px;font-weight:500;color:var(--blush);letter-spacing:-.04em}
+.advisors{padding:32px 34px}
+.advisors p{font-size:15px;line-height:1.7;color:var(--soft);margin:0 0 16px}
+.advisors p b{color:var(--ink);font-weight:500}
+
+/* ---------- 11 · Financials ---------- */
+.fin table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+.fin th{text-align:left;font-size:10px;letter-spacing:1.1px;text-transform:uppercase;font-weight:500;color:var(--muted);padding:0 10px 10px 0}
+.fin th.yr{text-align:center}
+.fin td{padding:10px 10px 10px 0;border-top:1px solid var(--line);color:var(--soft)}
+.fin td.yr{text-align:center;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ink)}
+.fin td:first-child{color:var(--ink);font-weight:500}
+.fin .tbd{color:var(--dim);font-style:italic;font-family:Inter,Arial,sans-serif;font-size:11.5px}
+
+/* ---------- 12 · Status & ask ---------- */
+.ask5{grid-template-columns:1fr 1.3fr;gap:18px;align-items:start;flex:none}
+.team3{display:flex;flex-direction:column;gap:18px;padding:24px 26px}
+.team3 .person img{width:70px;height:70px}
+.team3 .person b{font-size:17px}
+.team3 .person small{font-size:12px}
+.ask h3{font-size:22px;letter-spacing:-.04em;margin-bottom:6px}
+.ask ol{list-style:none;padding:0;margin:0}
+.ask li{display:grid;grid-template-columns:24px 1fr;padding:8px 0;border-top:1px solid #ffffff16;font-size:11.5px;line-height:1.45;color:#c9bdc1}
+.ask li:first-child{border-top:0}
+.ask li span{font-size:9.5px;color:var(--rose);padding-top:2px}
+.ask li b{display:block;color:var(--ink);font-weight:500;font-size:13.5px}
+.ask5 .ask{padding:18px 28px}
+.ask5 .ask h3{font-size:24px;margin-bottom:4px}
+.ask5 .ask li b{font-size:15.5px}
+.ask5 .ask li{font-size:13px;padding:6px 0}
+a.cta{display:inline-flex;align-items:center;gap:26px;padding:10px 16px;background:#f4bcc7;color:#201317;border-radius:7px;text-decoration:none;font-size:12px;font-weight:600;margin-top:10px;align-self:flex-start}
+
+/* ---------- Chrome: footer & nav (shared across every deck) ---------- */
+footer{position:fixed;bottom:0;left:0;right:0;z-index:10;padding:14px 4%;display:flex;align-items:center;justify-content:space-between;background:#090909e0;backdrop-filter:blur(16px);border-top:1px solid #ffffff10}
+.progress{display:flex;gap:6px;align-items:center}
+.progress button{cursor:pointer;padding:8px 0;width:26px;background:none;border:0}
+.progress button:after{content:"";display:block;height:2px;background:#ffffff30}
+.progress button.active:after{background:var(--blush)}
+.progress .sep{width:1px;height:12px;background:#ffffff30;margin:0 6px}
+.controls{display:flex;gap:10px;align-items:center}
+.controls span{font-size:10px;color:var(--muted);margin-right:12px;letter-spacing:1px;white-space:nowrap}
+.controls button{border:1px solid #ffffff30;background:transparent;color:white;border-radius:50%;width:32px;height:32px;cursor:pointer}
+.controls button:disabled{opacity:.25;cursor:default}
+:focus-visible{outline:2px solid var(--blush);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){main{scroll-behavior:auto}}
+@media print{html,body{background:#090909;-webkit-print-color-adjust:exact;print-color-adjust:exact}footer{display:none}header{position:fixed;background:none}main{height:auto;overflow:visible;scroll-snap-type:none}section{width:1280px;height:720px;display:block;overflow:hidden;break-after:page;page-break-after:always}section:last-child{break-after:auto;page-break-after:auto}.canvas{transform:none}@page{size:1280px 720px;margin:0}}
+
+/* ---------- Phones: drop the fixed canvas and stack everything ---------- */
+@media screen and (max-width:750px){
+header{padding:18px 6%}.label{font-size:8px}
+section{height:auto;min-height:100svh;display:block;scroll-snap-align:start}
+main{scroll-snap-type:y proximity}
+.canvas{width:auto;height:auto;transform:none;padding:96px 6% 96px}
+.top{flex-direction:column;align-items:flex-start;gap:14px}
+h2{font-size:38px}
+.cover h1{font-size:46px}
+.mkt,.comp,.prod,.biz,.gtmplan,.team10,.ask5{grid-template-columns:minmax(0,1fr)!important}
+.road{grid-template-columns:1fr 1fr!important}
+footer{gap:12px}.progress{flex:1;min-width:0;gap:3px;overflow:hidden}.progress button{flex:1;min-width:0;width:auto}.progress .sep{display:none}
+/* Both workflow diagrams are hand-positioned for 1280×720 : keep them a scaled fixed canvas rather than reflowing. */
+#s2,#s3{height:100svh!important;display:grid!important;place-items:center}
+#s2 .canvas,#s3 .canvas{width:1280px!important;height:720px!important;padding:88px 72px 82px!important;transform:scale(calc(min(100vw,750px)/1280))!important}
+}
+
+/* Ascending GTM milestones */
+.gtm-intro{font-size:17px;color:var(--soft);margin-top:14px}
+.gtm-path{position:relative;width:1136px;height:420px;flex:none;margin-top:8px}
+.gtm-curve{position:absolute;inset:0;width:100%;height:100%}
+.gtm-milestone{position:absolute;width:244px}
+.gtm-milestone h3{font-size:23px;line-height:1.15;margin:0 0 9px}
+.gtm-milestone p{font-size:14px;line-height:1.55;color:var(--soft)}
+.gtm-milestone b{display:block;margin-top:10px;font-size:11px;font-weight:500;color:var(--rose)}
+.gtm-milestone img{width:76px;height:68px;object-fit:contain;position:absolute;left:56px;top:-80px}
+.gtm-leadership{position:absolute;left:665px;top:20px;width:135px;height:95px;object-fit:contain}
+.gtm-foot{font-size:11px;color:var(--muted);margin-top:0}
+@media screen and (max-width:750px){#s9{height:100svh!important;display:grid!important;place-items:center}#s9 .canvas{width:1280px!important;height:720px!important;padding:88px 72px 82px!important;transform:scale(calc(min(100vw,750px)/1280))!important}}
+
+/* Business model: price and participation */
+.revenue-layout{display:grid;grid-template-columns:480px 1fr;gap:36px;margin-top:48px}
+.revenue-price{padding-top:12px}
+.revenue-number{font-size:96px;letter-spacing:-7px;line-height:1.1;color:var(--blush);margin-top:12px}
+.revenue-unit{font-size:23px;color:var(--ink);margin-top:8px}
+.revenue-detail{font-size:16px;line-height:1.65;color:var(--soft);margin-top:24px}
+.revenue-future{border-top:1px solid var(--line);margin-top:30px;padding-top:20px}
+.revenue-future p{font-size:16px;color:var(--soft);margin-top:8px}
+.revenue-future small{display:block;font-size:12px;color:var(--muted);margin-top:7px}
+.revenue-future-big{margin-top:40px;padding-top:28px}
+.revenue-future-big .k{font-size:13px}
+.revenue-future-big p{font-size:24px;color:var(--ink);margin-top:14px;line-height:1.4}
+.revenue-future-big small{font-size:15px;margin-top:10px}
+.revenue-diagram{position:relative;height:400px}
+.revenue-diagram svg{position:absolute;inset:0;width:100%;height:100%}
+.revenue-leader{position:absolute;top:0;left:75px;display:flex;gap:18px;align-items:center}
+.revenue-leader img{width:135px;height:104px;object-fit:contain}
+.revenue-diagram h3{font-size:20px;margin:0 0 7px}
+.revenue-diagram p{font-size:13px;color:var(--soft)}
+.revenue-user{position:absolute;top:205px;width:280px;text-align:center}
+.revenue-coord{left:0}.revenue-family{right:0}
+.revenue-user>img,.revenue-pair{height:94px;margin-bottom:15px}
+.revenue-user>img{width:100px;object-fit:contain}
+.revenue-pair{display:flex;justify-content:center;gap:4px}
+.revenue-pair img{height:94px;width:90px;object-fit:contain}
+.revenue-user span{display:block;margin-top:12px;color:var(--rose);font-size:12px}
+@media screen and (max-width:750px){#s8{height:100svh!important;display:grid!important;place-items:center}#s8 .canvas{width:1280px!important;height:720px!important;padding:88px 72px 82px!important;transform:scale(calc(min(100vw,750px)/1280))!important}}
+
+.founder-duo{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:28px;max-width:1000px;width:100%;align-self:center}
+.founder-duo figure{margin:0}
+.founder-duo img{width:100%;height:300px;object-fit:cover;object-position:center 35%;border-radius:12px;display:block}
+.founder-duo figcaption{padding-top:17px}
+.founder-duo h3{font-size:32px;letter-spacing:-1px}
+.founder-duo p{font-size:17px;color:var(--rose);margin-top:7px}
+.founder-support{font-size:14px;color:var(--muted);margin:24px auto 0;width:1000px;border-top:1px solid var(--line);padding-top:16px}
+.founder-support b{font-weight:500;color:var(--blush)}
+@media screen and (max-width:750px){#s10{height:100svh!important;display:grid!important;place-items:center}#s10 .canvas{width:1280px!important;height:720px!important;padding:88px 72px 82px!important;transform:scale(calc(min(100vw,750px)/1280))!important}}
+
+/* Centered intelligence overview, founder portraits, and focused raise */
+.intelligence-center{text-align:center;margin-top:27px}
+.intelligence-center h2.hl{font-size:64px}
+.intelligence-statement{font-size:29px;line-height:1.45;color:var(--soft);margin:24px auto 0}
+.intelligence-statement b{font-weight:500;color:var(--ink)}
+.intelligence-levels{display:flex;justify-content:center;gap:100px;margin-top:32px}
+.intelligence-levels>div{width:340px}
+.intelligence-levels img{height:110px;width:155px;object-fit:contain;margin-bottom:12px}
+.intelligence-levels h3{font-size:23px}
+.intelligence-levels p{font-size:17px;color:var(--soft);margin-top:10px}
+.founder-duo{margin-top:24px;gap:80px;max-width:1040px;text-align:center}
+.founder-duo img{height:220px;width:220px;border-radius:50%;object-fit:contain;object-position:center;margin:0 auto}
+.founder-duo figcaption{padding-top:16px}
+.founder-duo h3{font-size:30px}
+.founder-duo p{font-size:16px;margin-top:6px}
+.founder-experience{font-size:17px;line-height:1.5;color:var(--soft);margin-top:17px}
+.founder-experience span{display:block;font-size:14px;line-height:1.5;color:var(--muted);margin-top:12px}
+.raise-focus{text-align:center;margin:auto 0}
+.raise-focus h2{font-size:88px;line-height:1.1}
+.raise-focus h2 em{display:block;font-size:156px;line-height:1.15;margin-top:4px}
+.raise-purpose{font-size:25px;line-height:1.5;color:var(--soft);margin-top:20px}
+.raise-focus .cta{font-size:17px;padding:14px 24px;margin-top:28px}
+.raise-contact{font-size:14px;color:var(--muted);margin-top:14px}
+@media screen and (max-width:750px){#s1,#s12{height:100svh!important;display:grid!important;place-items:center}#s1 .canvas,#s12 .canvas{width:1280px!important;height:720px!important;padding:88px 72px 82px!important;transform:scale(calc(min(100vw,750px)/1280))!important}}
+
+/* Two connected intelligence scenes */
+.intelligence-center{margin-top:12px}
+.intelligence-center h2.hl{font-size:60px}
+.intelligence-statement{font-size:23px;margin-top:16px}
+.intelligence-scenes{display:grid;grid-template-columns:520px 520px;gap:64px;justify-content:center;margin-top:22px}
+.intelligence-scene{margin:0}
+.scene-art{height:270px;position:relative}
+.scene-art svg{position:absolute;inset:0;width:100%;height:100%}
+.scene-art img{position:absolute;object-fit:contain}
+.scene-home{left:0;top:34px;width:230px;height:190px}
+.scene-lcc{left:332px;top:86px;width:130px;height:135px}
+.scene-art span{position:absolute;font-size:12px;color:var(--muted)}
+.home-label{top:235px;left:0;width:230px}.lcc-label{top:235px;left:310px;width:174px}
+.scene-leadership{left:202px;top:0;width:116px;height:95px}
+.leadership-label{left:165px;top:98px;width:190px;background:var(--bg)}
+.scene-coord{top:178px;width:72px;height:64px}.scene-coord.c1{left:56px}.scene-coord.c2{left:224px}.scene-coord.c3{left:392px}
+.coordinators-label{top:250px;left:80px;width:360px}
+.intelligence-scene figcaption{margin-top:22px}
+.intelligence-scene h3{font-size:25px}
+.intelligence-scene figcaption p{font-size:17px;color:var(--soft);margin-top:10px}
+
+/* Brand-first investor cover */
+body:has(#cover:target) header .brand{visibility:hidden}
+#cover .canvas{justify-content:center}
+#cover .canvas:before{background:linear-gradient(90deg,#090909 0%,#090909dd 18%,#09090970 47%,#09090908 85%),linear-gradient(0deg,#090909 0%,transparent 35%),url(assets/family.jpg) 70% 36%/cover no-repeat}
+.brand-cover-copy{max-width:730px}
+.cover-identity{display:flex;align-items:center;gap:0;margin:30px 0 30px}
+.cover-identity img{width:240px;height:240px;object-fit:contain;margin:-68px -44px -68px -40px}
+#cover .cover-identity h1{font-size:132px;line-height:1;letter-spacing:-8px;margin:0;font-weight:600;transform:translateY(4px)}
+.cover-position{font-size:39px;line-height:1.2;letter-spacing:-1px;color:var(--ink)}
+.cover-position em{font-size:49px}
+.cover-audience{font-size:21px;color:var(--soft);margin-top:20px}
+.cover-contact{margin-top:48px;padding-top:22px;border-top:1px solid var(--line);max-width:480px}
+.cover-contact p{font-size:17px;color:var(--ink)}
+.cover-contact p span{color:var(--muted)}
+.cover-contact>div{display:flex;gap:16px;align-items:center;margin-top:15px;font-size:17px;color:var(--rose)}
+.cover-contact a{color:var(--blush);text-decoration:none}
+@media screen and (max-width:750px){#cover{height:100svh!important;display:grid!important;place-items:center}#cover .canvas{width:1280px!important;height:720px!important;padding:88px 72px 82px!important;transform:scale(calc(min(100vw,750px)/1280))!important}}
+
+#s9 .gtm-milestone{width:218px}
+#s9 .gtm-milestone h3{font-size:21px}
+#s9 .gtm-leadership{left:590px;top:5px;width:120px;height:85px}
+
+#closing .cover-copy{max-width:800px;width:800px}
+.closing-identity{display:flex;justify-content:center;align-items:center;gap:0;margin-bottom:24px}
+.closing-identity img{width:240px;height:240px;object-fit:contain;margin:-45px -38px -45px -35px}
+#closing .closing-identity h1{font-size:110px;line-height:1;letter-spacing:-6px;margin:0;transform:translateY(4px)}
+#closing .cover-sub{max-width:none;font-size:25px}
+</style></head>
+<body>
+<header><div class="brand"><img src="assets/signet.png" alt="">Culvay</div><span class="label">Founding pilot · Culvay · 2026</span></header>
+<main>
+
+<!-- ============ COVER ============ -->
+<section id="cover" class="cover" aria-labelledby="t0"><div class="canvas">
+<div class="cover-copy brand-cover-copy">
+<div class="eyebrow">Founding agency pilot · 2026</div>
+<div class="cover-identity"><img src="assets/signet.png" alt="Culvay logo"><h1 id="t0">CULVAY</h1></div>
+<p class="cover-position">Placement and organizational<br><em>intelligence.</em></p>
+<p class="cover-audience">For exchange agencies.</p>
+<div class="cover-contact"><p>Celina Sawizki <span>· Co-founder</span></p><div><a href="https://culvay.com">culvay.com</a><span>·</span><a href="mailto:info@culvay.com">info@culvay.com</a></div></div>
+</div>
+</div></section>
+
+<!-- ============ 01 · PROBLEM ============ -->
+<section id="s2" aria-labelledby="t2"><div class="canvas diagram-canvas">
+<div class="eyebrow">02 / The problem</div>
+<h2 id="t2" class="hl">The agency finds out <em>last.</em></h2>
+<p class="lede">One manual check-in a month. Nothing in between. Until something breaks.</p>
+
+<svg width="1280" height="720" style="position:absolute;inset:0" aria-hidden="true"><defs>
+<linearGradient id="flow2" gradientUnits="userSpaceOnUse" x1="0" y1="640" x2="0" y2="200"><stop stop-color="#f1b9c466"></stop><stop offset="1" stop-color="#f1b9c4"></stop></linearGradient>
+<marker id="arrow2" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L8 5L1 9Z" fill="#f1b9c4"></path></marker></defs>
+<g fill="none" stroke="url(#flow2)" stroke-width="2" marker-end="url(#arrow2)">
+<path d="M568 538C568 524 610 520 616 514"></path>
+<path d="M712 538C712 524 670 520 664 514"></path>
+<path d="M640 480V446"></path>
+</g>
+<path d="M640 446V270" stroke="#f1b9c455" stroke-width="2" stroke-dasharray="4 7" fill="none" marker-end="url(#arrow2)"></path>
+</svg>
+
+<img class="art" style="left:590px;top:200px;width:100px;height:62px" src="assets/leadership-pink.png" alt="Agency leadership">
+<div class="txt" style="left:702px;top:212px;width:270px"><div class="name">Agency leadership</div></div>
+
+<img class="art" style="left:600px;top:370px;width:80px;height:70px" src="assets/coordinator-pink.png" alt="Local coordinator">
+<div class="txt" style="left:688px;top:384px;width:200px"><div class="name">Local coordinator</div><p class="caption">an <b>HR role</b></p></div>
+
+<img class="art" style="left:522px;top:542px;width:92px;height:78px" src="assets/family-pink.png" alt="Host family">
+<img class="art" style="left:682px;top:542px;width:60px;height:78px" src="assets/au-pair-pink.png" alt="Au pair">
+<div class="txt" style="left:488px;width:160px;top:624px;text-align:center"><div class="name" style="font-size:13px">Host family</div></div>
+<div class="txt" style="left:652px;width:200px;top:624px;text-align:left;padding-left:30px"><div class="name" style="font-size:13px">Au pair</div></div>
+
+<div class="step" style="left:629px;top:517px">1</div><div class="arrow-label" style="left:726px;top:502px;line-height:16px">~1 check-in<br>per month</div>
+<div class="step" style="left:609px;top:355px">2</div><div class="arrow-label" style="left:652px;top:323px;line-height:16px">scattered report<br>only if turnover happens</div>
+
+<div class="txt" style="left:72px;top:310px;width:360px"><p class="thesis" style="margin-top:0">Only <b class="pink">7.9%</b> of au pairs with a problem told their agency. <b class="pink">79.8%</b> told friends.</p><p class="caption" style="margin-top:16px">Source: Culvay field study of 120+ au pairs.</p></div>
+
+</div></section>
+
+<!-- ============ 02 · DESCRIPTION ============ -->
+<section id="s1" aria-labelledby="t1"><div class="canvas">
+<div class="eyebrow">03 / Our vision</div>
+<div class="intelligence-center">
+<h2 id="t1" class="hl">From human behavior to organizational <em>intelligence.</em></h2>
+<p class="intelligence-statement">Grounded in Organizational Behavior Management (OBM) research.</p>
+<div class="intelligence-scenes">
+<figure class="intelligence-scene">
+<div class="scene-art placement-scene" role="img" aria-label="Host family and au pair in one home, connected to their local coordinator">
+<svg viewBox="0 0 520 270" aria-hidden="true"><path d="M216 151H340" fill="none" stroke="#c48d9b" stroke-width="2"></path><circle cx="278" cy="151" r="5" fill="#f1b9c4"></circle></svg>
+<img class="scene-home" src="assets/household-pink.png" alt="Host-family home with an au pair">
+<img class="scene-lcc" src="assets/coordinator-pink.png" alt="Local coordinator at a desk">
+<span class="home-label">Host family + au pair</span><span class="lcc-label">Local coordinator</span>
+</div>
+<figcaption><h3>Placement intelligence</h3><p>One placement. Shared context.</p></figcaption>
+</figure>
+<figure class="intelligence-scene">
+<div class="scene-art organization-scene" role="img" aria-label="Three local coordinators connected to agency leadership, bringing placement information together">
+<svg viewBox="0 0 520 270" aria-hidden="true"><path d="M260 108V140M92 178V140H428V178M260 140V178" fill="none" stroke="#c48d9b" stroke-width="2"></path><circle cx="260" cy="140" r="5" fill="#f1b9c4"></circle></svg>
+<img class="scene-leadership" src="assets/leadership-pink.png" alt="Agency leadership">
+<span class="leadership-label">Agency leadership</span>
+<img class="scene-coord c1" src="assets/coordinator-pink.png" alt="Local coordinator">
+<img class="scene-coord c2" src="assets/coordinator-man-pink.png" alt="Local coordinator">
+<img class="scene-coord c3" src="assets/coordinator-woman-pink.png" alt="Local coordinator">
+<span class="coordinators-label">Across coordinators and placements</span>
+</div>
+<figcaption><h3>Organizational intelligence</h3><p>Every placement. Agency-wide insight.</p></figcaption>
+</figure>
+</div>
+</div>
+</div></section>
+
+<!-- ============ 03 · SOLUTION ============ -->
+<section id="s3" aria-labelledby="t3"><div class="canvas diagram-canvas">
+<div class="eyebrow">04 / How it works</div>
+<h2 id="t3" class="hl">Intelligence at every <em>level.</em></h2>
+<p class="lede">Connected information. Better-informed decisions.</p>
+
+<div class="swarm-band"></div>
+<svg width="1280" height="720" style="position:absolute;inset:0" aria-hidden="true"><defs>
+<linearGradient id="flow" gradientUnits="userSpaceOnUse" x1="0" y1="640" x2="0" y2="200"><stop stop-color="#f1b9c466"></stop><stop offset="1" stop-color="#f1b9c4"></stop></linearGradient>
+<marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L8 5L1 9Z" fill="#f1b9c4"></path></marker>
+<radialGradient id="orb" cx="30%" cy="25%"><stop stop-color="#f0dce0"></stop><stop offset=".6" stop-color="#c48d9b"></stop><stop offset="1" stop-color="#91384f"></stop></radialGradient></defs>
+<g fill="none" stroke="url(#flow)" stroke-width="2" marker-end="url(#arrow)" opacity="1">
+<path d="M358 538C358 524 400 520 406 514"></path>
+<path d="M502 538C502 524 460 520 454 514"></path>
+<path d="M430 480V446"></path>
+<path d="M430 366V340"></path></g><g fill="none" stroke="url(#flow)" stroke-width="2" marker-end="url(#arrow)" opacity=".45">
+<path d="M648 538C648 524 690 520 696 514"></path>
+<path d="M792 538C792 524 750 520 744 514"></path>
+<path d="M720 480V446"></path>
+<path d="M720 366V340"></path></g><g fill="none" stroke="url(#flow)" stroke-width="2" marker-end="url(#arrow)" opacity=".45">
+<path d="M938 538C938 524 980 520 986 514"></path>
+<path d="M1082 538C1082 524 1040 520 1034 514"></path>
+<path d="M1010 480V446"></path>
+<path d="M1010 366V340"></path></g>
+<path d="M720 296V268" stroke="url(#flow)" stroke-width="2" fill="none" marker-end="url(#arrow)"></path>
+<path d="M268 462H397" stroke="#c48d9b" stroke-width="1.5" stroke-dasharray="3 4" fill="none"></path>
+<path d="M1060 404H1082" stroke="#f1b9c455" stroke-width="1.5" stroke-dasharray="2 5"></path>
+<path d="M330 319l18 -11l20 17l16 -12M330 319l38 6" stroke="#f1b9c455" fill="none"></path><circle cx="330" cy="319" r="8.5" fill="#f1b9c4" opacity=".05"></circle><circle cx="330" cy="319" r="3.5" fill="url(#orb)"></circle><circle cx="348" cy="308" r="8" fill="#f1b9c4" opacity=".05"></circle><circle cx="348" cy="308" r="3" fill="url(#orb)"></circle><circle cx="368" cy="325" r="8.5" fill="#f1b9c4" opacity=".05"></circle><circle cx="368" cy="325" r="3.5" fill="url(#orb)"></circle><circle cx="384" cy="313" r="8" fill="#f1b9c4" opacity=".05"></circle><circle cx="384" cy="313" r="3" fill="url(#orb)"></circle><path d="M430 319l18 -11l20 17l16 -12M430 319l38 6" stroke="#f1b9c455" fill="none"></path><circle cx="430" cy="319" r="8.5" fill="#f1b9c4" opacity=".05"></circle><circle cx="430" cy="319" r="3.5" fill="url(#orb)"></circle><circle cx="448" cy="308" r="8" fill="#f1b9c4" opacity=".05"></circle><circle cx="448" cy="308" r="3" fill="url(#orb)"></circle><circle cx="468" cy="325" r="8.5" fill="#f1b9c4" opacity=".05"></circle><circle cx="468" cy="325" r="3.5" fill="url(#orb)"></circle><circle cx="484" cy="313" r="8" fill="#f1b9c4" opacity=".05"></circle><circle cx="484" cy="313" r="3" fill="url(#orb)"></circle><path d="M530 319l18 -11l20 17l16 -12M530 319l38 6" stroke="#f1b9c455" fill="none"></path><circle cx="530" cy="319" r="8.5" fill="#f1b9c4" opacity=".05"></circle><circle cx="530" cy="319" r="3.5" fill="url(#orb)"></circle><circle cx="548" cy="308" r="8" fill="#f1b9c4" opacity=".05"></circle><circle cx="548" cy="308" r="3" fill="url(#orb)"></circle><circle cx="568" cy="325" r="8.5" fill="#f1b9c4" opacity=".05"></circle><circle cx="568" cy="325" r="3.5" fill="url(#orb)"></circle><circle cx="584" cy="313" r="8" fill="#f1b9c4" opacity=".05"></circle><circle cx="584" cy="313" r="3" fill="url(#orb)"></circle><path d="M880 319l18 -11l20 17l16 -12M880 319l38 6" stroke="#f1b9c455" fill="none"></path><circle cx="880" cy="319" r="8.5" fill="#f1b9c4" opacity=".05"></circle><circle cx="880" cy="319" r="3.5" fill="url(#orb)"></circle><circle cx="898" cy="308" r="8" fill="#f1b9c4" opacity=".05"></circle><circle cx="898" cy="308" r="3" fill="url(#orb)"></circle><circle cx="918" cy="325" r="8.5" fill="#f1b9c4" opacity=".05"></circle><circle cx="918" cy="325" r="3.5" fill="url(#orb)"></circle><circle cx="934" cy="313" r="8" fill="#f1b9c4" opacity=".05"></circle><circle cx="934" cy="313" r="3" fill="url(#orb)"></circle><path d="M980 319l18 -11l20 17l16 -12M980 319l38 6" stroke="#f1b9c455" fill="none"></path><circle cx="980" cy="319" r="8.5" fill="#f1b9c4" opacity=".05"></circle><circle cx="980" cy="319" r="3.5" fill="url(#orb)"></circle><circle cx="998" cy="308" r="8" fill="#f1b9c4" opacity=".05"></circle><circle cx="998" cy="308" r="3" fill="url(#orb)"></circle><circle cx="1018" cy="325" r="8.5" fill="#f1b9c4" opacity=".05"></circle><circle cx="1018" cy="325" r="3.5" fill="url(#orb)"></circle><circle cx="1034" cy="313" r="8" fill="#f1b9c4" opacity=".05"></circle><circle cx="1034" cy="313" r="3" fill="url(#orb)"></circle></svg>
+
+<img class="art" style="left:670px;top:200px;width:100px;height:62px" src="assets/leadership-pink.png" alt="Agency leadership">
+<div class="txt" style="left:782px;top:214px"><div class="name">Agency leadership</div></div>
+<div class="pill" style="left:720px;top:304px;padding:5px 14px"><i></i>Agent swarms</div>
+
+<div class="">
+<img class="art" style="left:390px;top:370px;width:80px;height:70px" src="assets/coordinator-pink.png" alt="Local coordinator">
+<div class="pill" style="left:430px;top:484px;padding:5px 12px"><i></i><i></i>AI agents</div>
+<img class="art" style="left:312px;top:542px;width:92px;height:78px" src="assets/family-pink.png" alt="Host family">
+<img class="art" style="left:472px;top:542px;width:60px;height:78px" src="assets/au-pair-pink.png" alt="Au pair">
+</div><div class="quiet">
+<img class="art" style="left:680px;top:370px;width:80px;height:70px" src="assets/coordinator-man-pink.png" alt="Local coordinator">
+<div class="pill" style="left:720px;top:484px;padding:5px 12px"><i></i><i></i>AI agents</div>
+<img class="art" style="left:602px;top:542px;width:92px;height:78px" src="assets/family-pink.png" alt="Host family">
+<img class="art" style="left:762px;top:542px;width:60px;height:78px" src="assets/au-pair-pink.png" alt="Au pair">
+</div><div class="quiet">
+<img class="art" style="left:970px;top:370px;width:80px;height:70px" src="assets/coordinator-woman-pink.png" alt="Local coordinator">
+<div class="pill" style="left:1010px;top:484px;padding:5px 12px"><i></i><i></i>AI agents</div>
+<img class="art" style="left:892px;top:542px;width:92px;height:78px" src="assets/family-pink.png" alt="Host family">
+<img class="art" style="left:1052px;top:542px;width:60px;height:78px" src="assets/au-pair-pink.png" alt="Au pair">
+</div>
+
+<div class="txt" style="left:478px;top:384px"><div class="name">Local coordinator</div></div>
+<div class="txt" style="left:278px;width:160px;top:624px;text-align:center"><div class="name" style="font-size:13px">Host family</div></div>
+<div class="txt" style="left:442px;width:200px;top:624px;text-align:left;padding-left:30px"><div class="name" style="font-size:13px">Au pair</div></div>
+
+
+<div class="step" style="left:419px;top:517px">1</div><div class="arrow-label" style="left:516px;top:502px;line-height:16px">weekly check-ins<br>+ schedule</div>
+<div class="step" style="left:399px;top:451px">2</div><div class="arrow-label" style="left:442px;top:453px">placement intelligence</div>
+<div class="step" style="left:399px;top:341px">3</div><div class="arrow-label" style="left:442px;top:343px">every placement, every week</div>
+<div class="step" style="left:689px;top:270px">4</div><div class="arrow-label" style="left:732px;top:272px">organizational intelligence</div>
+
+<div class="notif" style="left:72px;top:400px;width:196px"><div class="app"><img src="assets/signet.png" alt="">Culvay<time>Early warning</time></div><h4>Parker family · Risk rising</h4><p>Over the 45-hour weekly legal limit for 3 weeks.</p><p class="sug">Suggested: call the host family this week.</p></div>
+</div></section>
+
+<!-- ============ 04 · COMPETITION ============ -->
+<section id="s4" aria-labelledby="t4"><div class="canvas">
+<div class="eyebrow">05 / Why Culvay</div>
+<h2 id="t4" class="hl">Today it runs on <em>WhatsApp.</em></h2>
+<div class="v3 comp">
+<figure class="map card">
+<svg viewBox="0 0 440 280" role="img" aria-label="Positioning map. Horizontal axis: generic tools to built for exchange programs. Vertical axis: reactive to proactive. Group chats, spreadsheets and generic CRMs sit in the generic, reactive corner. Agency CRMs and coordinator's gut are exchange-specific but reactive. Culvay is alone in the built-for-exchange, proactive corner.">
+<rect x="230" y="14" width="196" height="118" rx="10" fill="#f1b9c40a"></rect>
+<path d="M30 140H426 M228 14V266" stroke="#ffffff22"></path>
+<text x="30" y="276" font-size="10" fill="#8a8084">← Generic tools</text>
+<text x="426" y="276" font-size="10" fill="#8a8084" text-anchor="end">Built for exchange →</text>
+<text x="14" y="140" font-size="10" fill="#8a8084" transform="rotate(-90 14 140)" text-anchor="middle">Reactive ← → Proactive</text>
+<g font-size="11.5" fill="#d4cbca">
+<circle cx="78" cy="226" r="7" fill="#a79a94"></circle><text x="90" y="230">Group chats &amp; email</text>
+<circle cx="70" cy="186" r="7" fill="#a79a94"></circle><text x="82" y="190">Spreadsheets</text>
+<circle cx="120" cy="114" r="7" fill="#a79a94"></circle><text x="132" y="118">Generic CRMs &amp; surveys</text>
+<circle cx="290" cy="176" r="7" fill="#a79a94"></circle><text x="302" y="180">Agency CRMs</text>
+<circle cx="330" cy="224" r="7" fill="#a79a94"></circle><text x="342" y="228">Coordinator's gut</text>
+</g>
+<circle cx="360" cy="58" r="22" fill="#f1b9c41f"></circle><circle cx="360" cy="58" r="10" fill="#f1b9c4"></circle>
+<text x="340" y="62" font-size="14" fill="#f1b9c4" text-anchor="end" font-weight="600">Culvay</text>
+<text x="420" y="122" font-size="9" letter-spacing="1.2" fill="#c48d9b" text-anchor="end">EMPTY UNTIL NOW</text>
+</svg></figure>
+<ol class="points">
+<li><span class="big">Connected</span><p>Both sides. One placement record.</p></li>
+<li><span class="big pink">Intelligence</span><p>Placement insight. Agency-wide patterns.</p></li>
+<li><span class="big">120+</span><p>research participants shaped Culvay</p></li>
+</ol>
+</div>
+</div></section>
+
+<!-- ============ 05 · PRODUCT / SERVICE MODEL ============ -->
+<section id="s6" aria-labelledby="t6"><div class="canvas">
+<style>
+#s6 #t6{text-align:center;font-size:76px;margin-top:60px}
+#s6 .road{margin-top:108px;gap:16px}
+#s6 .road li{padding-top:28px}
+#s6 .road b{font-size:18px;line-height:1.35;margin-top:10px}
+#s6 .road span{font-size:10px}
+#s6 .road small{font-size:13px;line-height:1.5;margin-top:7px}
+#s6 .road li:before{width:24px;height:24px;top:-13px;font-size:12px}
+@media screen and (max-width:750px){#s6 .road{grid-template-columns:repeat(7,1fr)!important}#s6{height:100svh!important;display:grid!important;place-items:center}#s6 .canvas{width:1280px!important;height:720px!important;padding:88px 72px 82px!important;transform:scale(calc(min(100vw,750px)/1280))!important}}
+</style>
+<div class="eyebrow">06 / What your coordinators get</div>
+<h2 id="t6" class="hl">Built. Ready for<br><em>your coordinators.</em></h2>
+<ol class="road" aria-label="Live features and what comes next">
+<li><span>Done</span><b>Weekly check‑ins</b><small>Both sides of every placement</small></li>
+<li><span>Done</span><b>Shared schedule</b><small>10 hour / 45 hour checks</small></li>
+<li><span>Done</span><b>Coordinator dashboard</b><small>Instant alerts: hours, stipend mismatch, safety phrases, rematch signals</small></li>
+<li><span>Done</span><b>PDF summary</b><small>Placement context at a glance</small></li>
+<li><span>Done</span><b>Drafted WhatsApp follow-up</b></li>
+<li class="now"><span>Next</span><b>AI briefs</b><small>Built with the founding agency</small></li>
+<li class="now"><span>Next</span><b>Agency-wide insights</b><small>Built with the founding agency</small></li>
+</ol>
+
+</div></section>
+
+<!-- ============ 06 · BUSINESS MODEL ============ -->
+<section id="s8" aria-labelledby="t8"><div class="canvas">
+<div class="eyebrow">07 / Pricing</div>
+<h2 id="t8" class="hl">Simple pricing. Families always <em>free.</em></h2>
+<div class="revenue-layout">
+<div class="revenue-price">
+<div class="k">The agency pays</div>
+<div class="revenue-number">$79.99</div>
+<p class="revenue-unit">per coordinator / month</p>
+<div class="revenue-future revenue-future-big"><span class="k">Founding agency</span><p>[__]% off for [__] months</p></div>
+</div>
+<div class="revenue-diagram" role="group" aria-label="Agency subscription provides intelligence for leadership and coordinators, with free access for au pairs and host families.">
+<svg viewBox="0 0 610 400" aria-hidden="true"><path d="M300 105V155M300 155H135V205M300 155H465V205" stroke="#c48d9b" stroke-width="2" fill="none"></path><circle cx="300" cy="155" r="5" fill="#f1b9c4"></circle></svg>
+<div class="revenue-leader"><img src="assets/leadership-pink.png" alt="Agency leadership"><div><h3>Agency leadership</h3></div></div>
+<div class="revenue-user revenue-coord"><img src="assets/coordinator-pink.png" alt="Local coordinator"><h3>Coordinators</h3><span>Paid seats</span></div>
+<div class="revenue-user revenue-family"><div class="revenue-pair"><img src="assets/au-pair-pink.png" alt="Au pair"><img src="assets/family-pink.png" alt="Host family"></div><h3>Au pairs and host families</h3><span>Free</span></div>
+</div>
+</div>
+</div></section>
+
+<!-- ============ 07 · TEAM & ADVISORS ============ -->
+<section id="s10" aria-labelledby="t10"><div class="canvas">
+<div class="eyebrow">08 / Founders</div>
+<h2 id="t10" class="hl">The people behind <em>Culvay.</em></h2>
+<div class="founder-duo">
+<figure><img src="assets/celina.jpg" alt="Celina Sawizki"><figcaption><h3>Celina Sawizki</h3><p>Co-founder · Former au pair</p><div class="founder-experience">Psychology, Entrepreneurship &amp; CS<br>Temple University<br><span>WHY US Ambassador<br>European Innovation Academy alumni</span></div></figcaption></figure>
+<figure><img src="assets/mukul.jpg" alt="Mukul Natarajan"><figcaption><h3>Mukul Natarajan</h3><p>Co-founder · Engineering</p><div class="founder-experience">CS &amp; Business<br>University of Maryland<br><span>AI/ML Engineer</span></div></figcaption></figure>
+</div>
+<!-- Founder experience source: https://pitch.culvay.com/, accessed October 27, 2026. -->
+</div></section>
+
+<!-- ============ 08 · FINANCIALS ============ -->
+<!-- ============ 09 · MARKET ============ -->
+<!-- ============ 10 · GO-TO-MARKET ============ -->
+<section id="s9" aria-labelledby="t9"><div class="canvas">
+<div class="eyebrow">09 / Your founding pilot</div>
+<h2 id="t9" class="hl">Your 3-month founding <em>pilot.</em></h2>
+<p class="gtm-intro">One region. Clear success criteria.</p>
+<div class="gtm-path" role="group" aria-label="Founding pilot journey: scope, onboarding, early warnings, results, and rollout.">
+<svg viewBox="0 0 1136 420" aria-hidden="true" class="gtm-curve">
+<defs><linearGradient id="gtm-rise" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#91384f"></stop><stop offset="1" stop-color="#f1b9c4"></stop></linearGradient><marker id="gtm-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="#f1b9c4" stroke-width="1.5"></path></marker></defs>
+<path d="M20 325 C150 325 225 290 320 270 S455 237 540 210 S680 170 760 140 S920 85 1000 55 L1110 12" fill="none" stroke="url(#gtm-rise)" stroke-width="4" marker-end="url(#gtm-arrow)"></path>
+<g stroke="#f1b9c426" stroke-dasharray="3 6"><path d="M90 320V402"></path><path d="M320 270V402"></path><path d="M540 210V402"></path><path d="M760 140V402"></path><path d="M1000 55V402"></path></g><g fill="#090909" stroke="#f1b9c4" stroke-width="2"><circle cx="90" cy="320" r="15"></circle><circle cx="320" cy="270" r="15"></circle><circle cx="540" cy="210" r="15"></circle><circle cx="760" cy="140" r="15"></circle><circle cx="1000" cy="55" r="15"></circle></g><g fill="#f1b9c4" font-family="Inter,Arial,sans-serif" font-size="12" text-anchor="middle"><text x="90" y="324">1</text><text x="320" y="274">2</text><text x="540" y="214">3</text><text x="760" y="144">4</text><text x="1000" y="59">5</text></g>
+</svg>
+<div class="gtm-milestone" style="left:0px;top:172px"><img src="assets/coordinator-pink.png" alt=""><h3>Week 1</h3><p>Scope, region,<br>success criteria.</p></div>
+<div class="gtm-milestone" style="left:225px;top:302px"><h3>Weeks 2 to 3</h3><p>Families and<br>au pairs join.</p></div>
+<div class="gtm-milestone" style="left:445px;top:250px"><h3>Weeks 4 to 11</h3><p>Early warnings.<br>Review every two weeks.</p></div>
+<div class="gtm-milestone" style="left:660px;top:184px"><h3>Week 12</h3><p>Results and decision.</p></div>
+<div class="gtm-milestone" style="left:906px;top:101px"><h3>Roll out</h3><p>Every region.<br>Founding price.</p></div>
+<img class="gtm-leadership" src="assets/leadership-pink.png" alt="Agency leadership">
+</div>
+</div></section>
+
+<!-- ============ 12 · STATUS & ASK ============ -->
+<section id="s12" aria-labelledby="t12"><div class="canvas">
+<div class="eyebrow">10 / The offer</div>
+<div class="raise-focus">
+<h2 id="t12">We're choosing <em>one agency.</em></h2>
+<p class="raise-purpose">3 months. One region.<br>Walk away if it does not work.</p>
+<a class="cta" href="mailto:info@culvay.com?subject=Culvay%20founding%20pilot">Let's talk <span aria-hidden="true">↗</span></a>
+<p class="raise-contact">info@culvay.com</p>
+</div>
+</div></section>
+
+<!-- ============ CLOSING ============ -->
+<section id="closing" class="cover closing" aria-labelledby="t13"><div class="canvas">
+<div class="cover-copy">
+<div class="closing-identity"><img src="assets/signet.png" alt="Culvay logo"><h1 id="t13">CULVAY</h1></div>
+<p class="cover-sub">Every placement deserves to be heard.</p>
+<div class="byline" style="margin-left:auto;margin-right:auto"><img src="assets/celina.jpg" alt=""><div><b>Celina Sawizki</b><small>Co-founder, Culvay</small></div></div>
+<p class="cover-site">culvay.com · info@culvay.com</p>
+</div>
+</div></section>
+
+</main><footer><div class="progress" aria-label="Slides"></div><div class="controls"><span id="count" aria-live="polite">01 / 11</span><button id="prev" aria-label="Previous slide">←</button><button id="next" aria-label="Next slide">→</button></div></footer><script>
+const slides=[...document.querySelectorAll('section')],main=document.querySelector('main'),progress=document.querySelector('.progress');let current=0;
+function fit(){document.documentElement.style.setProperty('--s',Math.min(innerWidth/1280,innerHeight/720))}addEventListener('resize',fit);fit();
+slides.forEach((s,i)=>{const b=document.createElement('button');b.setAttribute('aria-label','Go to slide '+(i+1));b.onclick=()=>go(i);progress.append(b)});
+const dots=[...progress.querySelectorAll('button')];
+function go(i){slides[Math.max(0,Math.min(slides.length-1,i))].scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})}
+function label(i){return String(i+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0')}
+function update(i){current=i;document.querySelector('#count').textContent=label(i);dots.forEach((b,j)=>{b.classList.toggle('active',j===i);b.setAttribute('aria-current',j===i?'step':'false')});document.querySelector('#prev').disabled=i===0;document.querySelector('#next').disabled=i===slides.length-1;history.replaceState(null,'','#'+slides[i].id)}
+const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)update(slides.indexOf(e.target))}),{root:main,threshold:.55});slides.forEach(s=>observer.observe(s));
+document.querySelector('#prev').onclick=()=>go(current-1);document.querySelector('#next').onclick=()=>go(current+1);
+document.addEventListener('keydown',e=>{if(e.target.matches('a,button,input'))return;if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();go(current+1)}if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();go(current-1)}if(e.key==='Home'){e.preventDefault();go(0)}if(e.key==='End'){e.preventDefault();go(slides.length-1)}});
+const start=slides.findIndex(s=>'#'+s.id===location.hash);if(start>0)slides[start].scrollIntoView();update(Math.max(start,0));
+</script>
+</body></html>

@@ -1,0 +1,20 @@
+# Slide 10: The offer
+# Edit only the text under each [number]. Keep the [number] lines.
+# *word* = pink italic accent. A new line = a line break on the slide.
+# Leave any <tags> in place. Lines starting with # are ignored.
+
+[10.1]
+10 / The offer
+
+[10.2]
+We're choosing *one agency.*
+
+[10.3]
+3 months. One region.
+Walk away if it does not work.
+
+[10.4]
+Let's talk <span aria-hidden="true">↗</span>
+
+[10.5]
+info@culvay.com

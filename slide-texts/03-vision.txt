@@ -1,0 +1,37 @@
+# Slide 03: Vision
+# Edit only the text under each [number]. Keep the [number] lines.
+# *word* = pink italic accent. A new line = a line break on the slide.
+# Leave any <tags> in place. Lines starting with # are ignored.
+
+[03.1]
+03 / Our vision
+
+[03.2]
+From human behavior to organizational *intelligence.*
+
+[03.3]
+Grounded in Organizational Behavior Management (OBM) research.
+
+[03.4]
+Host family + au pair
+
+[03.5]
+Local coordinator
+
+[03.6]
+Placement intelligence
+
+[03.7]
+One placement. Shared context.
+
+[03.8]
+Agency leadership
+
+[03.9]
+Across coordinators and placements
+
+[03.10]
+Organizational intelligence
+
+[03.11]
+Every placement. Agency-wide insight.

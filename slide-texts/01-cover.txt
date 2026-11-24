@@ -1,0 +1,29 @@
+# Slide 01: Cover
+# Edit only the text under each [number]. Keep the [number] lines.
+# *word* = pink italic accent. A new line = a line break on the slide.
+# Leave any <tags> in place. Lines starting with # are ignored.
+
+[01.1]
+Founding agency pilot · 2026
+
+[01.2]
+CULVAY
+
+[01.3]
+Placement and organizational
+*intelligence.*
+
+[01.4]
+For exchange agencies.
+
+[01.5]
+Celina Sawizki <span>· Co-founder</span>
+
+[01.6]
+culvay.com
+
+[01.7]
+·
+
+[01.8]
+info@culvay.com

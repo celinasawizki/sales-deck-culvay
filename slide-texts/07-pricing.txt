@@ -1,0 +1,40 @@
+# Slide 07: Simple pricing. Families always free.
+# Edit only the text under each [number]. Keep the [number] lines.
+# *word* = pink italic accent. A new line = a line break on the slide.
+# Leave any <tags> in place. Lines starting with # are ignored.
+
+[07.1]
+07 / Pricing
+
+[07.2]
+Simple pricing. Families always *free.*
+
+[07.3]
+The agency pays
+
+[07.4]
+$79.99
+
+[07.5]
+per coordinator / month
+
+[07.6]
+Founding agency
+
+[07.7]
+[__]% off for [__] months
+
+[07.8]
+Agency leadership
+
+[07.9]
+Coordinators
+
+[07.10]
+Paid seats
+
+[07.11]
+Au pairs and host families
+
+[07.12]
+Free

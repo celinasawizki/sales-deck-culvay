@@ -1,0 +1,71 @@
+# Slide 06: Built. Ready for your coordinators
+# Edit only the text under each [number]. Keep the [number] lines.
+# *word* = pink italic accent. A new line = a line break on the slide.
+# Leave any <tags> in place. Lines starting with # are ignored.
+
+[06.1]
+06 / What your coordinators get
+
+[06.2]
+Built. Ready for
+*your coordinators.*
+
+[06.3]
+Done
+
+[06.4]
+Weekly check‑ins
+
+[06.5]
+Both sides of every placement
+
+[06.6]
+Done
+
+[06.7]
+Shared schedule
+
+[06.8]
+10 hour / 45 hour checks
+
+[06.9]
+Done
+
+[06.10]
+Coordinator dashboard
+
+[06.11]
+Instant alerts: hours, stipend mismatch, safety phrases, rematch signals
+
+[06.12]
+Done
+
+[06.13]
+PDF summary
+
+[06.14]
+Placement context at a glance
+
+[06.15]
+Done
+
+[06.16]
+Drafted WhatsApp follow-up
+
+[06.17]
+Next
+
+[06.18]
+AI briefs
+
+[06.19]
+Built with the founding agency
+
+[06.20]
+Next
+
+[06.21]
+Agency-wide insights
+
+[06.22]
+Built with the founding agency

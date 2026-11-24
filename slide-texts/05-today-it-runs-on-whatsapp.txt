@@ -1,0 +1,58 @@
+# Slide 05: Today it runs on WhatsApp.
+# Edit only the text under each [number]. Keep the [number] lines.
+# *word* = pink italic accent. A new line = a line break on the slide.
+# Leave any <tags> in place. Lines starting with # are ignored.
+
+[05.1]
+05 / Why Culvay
+
+[05.2]
+Today it runs on *WhatsApp.*
+
+[05.3]
+← Generic tools
+
+[05.4]
+Built for exchange →
+
+[05.5]
+Reactive ← → Proactive
+
+[05.6]
+Group chats & email
+
+[05.7]
+Spreadsheets
+
+[05.8]
+Generic CRMs & surveys
+
+[05.9]
+Agency CRMs
+
+[05.10]
+Coordinator's gut
+
+[05.11]
+Culvay
+
+[05.12]
+EMPTY UNTIL NOW
+
+[05.13]
+Connected
+
+[05.14]
+Both sides. One placement record.
+
+[05.15]
+Intelligence
+
+[05.16]
+Placement insight. Agency-wide patterns.
+
+[05.17]
+120+
+
+[05.18]
+research participants shaped Culvay
