@@ -41,31 +41,34 @@ Instant alerts: hours, stipend mismatch, safety phrases, rematch signals
 Done
 
 [06.13]
-PDF summary
+PDF summary and WhatsApp drafts
 
 [06.14]
-Placement context at a glance
+Placement context, follow-up ready
 
 [06.15]
 Done
 
 [06.16]
-Drafted WhatsApp follow-up
-
-[06.17]
-Next
-
-[06.18]
 AI briefs
 
+[06.17]
+Done
+
+[06.18]
+Agency-wide insights
+
 [06.19]
-Built with the founding agency
+Patterns across coordinators
 
 [06.20]
 Next
 
 [06.21]
-Agency-wide insights
+AI agent in coordinators' WhatsApp
 
 [06.22]
-Built with the founding agency
+Briefs and suggested replies where coordinators already work
+
+[06.23]
+Early warnings explained in plain words
